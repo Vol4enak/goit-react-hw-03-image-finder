@@ -4,7 +4,7 @@ export const Searchbar = styled.header`
   top: 0;
   left: 0;
   position: sticky;
-  z-index: 1100;
+  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,7 +32,6 @@ export const SearchFormButton = styled.button`
   width: 48px;
   height: 48px;
   border: 0;
-  background-image: url('https://image.flaticon.com/icons/svg/149/149852.svg');
   background-size: 40%;
   background-repeat: no-repeat;
   background-position: center;

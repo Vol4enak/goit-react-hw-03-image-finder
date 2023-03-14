@@ -2,26 +2,21 @@ import {
   Searchbar,
   SearchForm,
   SearchFormButton,
-  SearchFormButtonLabel,
   SearchFormInput,
 } from './Searchbar.styled';
 
 import { FaSearch } from 'react-icons/fa';
-import { Formik, Form } from 'formik';
+import { Formik } from 'formik';
 
-const initialValues = {
-  name: '',
-};
-
-export const SearchBar = () => {
-  const handleSubmit = (values, action) => {
-    console.log(values);
-    console.log(action);
+export const SearchBar = ({ onSubmit }) => {
+  const handleSubmit = (name) => {
+    onSubmit(name);
+  
   };
 
   return (
     <Searchbar>
-      <Formik initialValues={initialValues} onSubmit={handleSubmit}>
+      <Formik initialValues={{ name: '' }} onSubmit={handleSubmit}>
         <SearchForm autoComplete="off">
           <SearchFormButton type="submit">
             <FaSearch size={20} />
