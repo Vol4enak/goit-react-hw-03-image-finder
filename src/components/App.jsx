@@ -29,7 +29,13 @@ export class App extends Component {
 
   getCard = async ({ name }) => {
     if (name.trim()) {
-      this.setState({ photo: [], name, statusSpiner: true, statusBtn: false });
+      this.setState({
+        photo: [],
+        name,
+        statusSpiner: true,
+        statusBtn: false,
+        page: 2,
+      });
       try {
         const material = await API.getPhoto(name, 1);
         this.cheackStatus(material);
