@@ -6,7 +6,6 @@ import { AppGrid } from './App.styled';
 import { SearchBar } from './Searchbar/Searchbar';
 import { ImageGallery } from './ImageGallery/ImageGallery';
 import { DowlandMore } from './Button/Button';
-import { Modal } from './Modal/Modal';
 import { RotatingLines } from 'react-loader-spinner';
 import { SpinnerBox } from './App.styled';
 export class App extends Component {

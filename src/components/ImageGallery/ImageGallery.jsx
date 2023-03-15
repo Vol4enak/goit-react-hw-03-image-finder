@@ -3,7 +3,9 @@ import { ImageGalleryItem } from 'components/ImageGalleryItem/ImageGalleryItem';
 export const ImageGallery = ({items}) => {
   return (
     <GallaryList>
-      <ImageGalleryItem items={items} />
+      {items.map(index => (
+        <ImageGalleryItem key={index.id} items={index} />
+      ))}
     </GallaryList>
   );
 };
